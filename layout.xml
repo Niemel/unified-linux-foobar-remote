@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layout onLaunch="launch" onVolumeUp="volume_up" onVolumeDown="volume_down" onResume="resume" onPause="pause" lightcolor="#e77300" darkcolor="#c46e19">
+  <tabs>
+    <tab text="Player">
+      <row weight="3">
+        <label id="title" text="Refresh Meta" color="purple"/>
+      </row>
+      <row weight="1">
+        <button text="Start" ontap="start_dbeef" color="green" />
+        <button text="Exit" ontap="stop_dbeef" color="red" />
+      </row>
+      <row weight="2">
+        <grid color="blue">
+          <button icon="previous" ontap="previous" />
+          <grid color="blue">
+            <row><button icon="stop" ontap="stop" /></row>
+            <row><button icon="playpause" ontap="play_pause" /></row>
+            <row><button icon="shuffle" ontap="random_song" /></row>
+          </grid>
+          <button icon="next" ontap="next" />
+        </grid>
+      </row>
+      <row weight="1">
+        <button icon="refresh" ontap="refresh_info" />
+      </row>
+    </tab>
+    <tab text="Rating">
+      <row weight="2">
+        <label id="title" text="Refresh Meta"  color="purple"/>
+      </row>
+      <row weight="0.5">
+        <grid color="blue">
+          <button icon="previous" ontap="previous" />
+          <button icon="playpause" ontap="play_pause" />
+          <button icon="next" ontap="next" />
+        </grid>
+      </row>
+      <row weight="1">
+        <button text="👍EN" color="green" ontap="fav_it_en" />
+        <button text="👍OT" color="green" ontap="fav_it_ot" />
+        <button text="👎" color="red" ontap="unfav_it" />
+      </row>
+      <row weight="1">
+        <button text="🐙EN" color="green" ontap="lang_en" />
+        <button text="🐙OT" color="red" ontap="lang_ot" />
+      </row>
+      <row weight="1">
+        <grid color="blue">
+          <button text="✸"  ontap="star_0" />
+          <button id="star1" text="☆"  ontap="star_1" />
+          <button id="star2" text="☆" ontap="star_2" />
+          <button id="star3" text="☆" ontap="star_3" />
+          <button id="star4" text="☆" ontap="star_4" />
+          <button id="star5" text="☆" ontap="star_5" />
+          <grid>
+            <row><button id="loveit" text="❤" ontap="love_it" /></row>
+            <row><button id="loveit" text="❤" ontap="unlove_it" /></row>
+          </grid>
+        </grid>
+      </row>
+      <row weight="1">
+        <button icon="refresh" ontap="refresh_info" />
+      </row>
+    </tab>
+  </tabs>
+</layout>
