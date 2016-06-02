@@ -54,7 +54,7 @@
           <button id="star5" text="☆" ontap="star_5" />
           <grid>
             <row><button id="loveit" text="❤" ontap="love_it" /></row>
-            <row><button id="loveit" text="❤" ontap="unlove_it" /></row>
+            <row><button id="unloveit" text="❤" ontap="unlove_it" /></row>
           </grid>
         </grid>
       </row>

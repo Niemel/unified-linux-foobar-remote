@@ -125,7 +125,7 @@ end
 
 --@help Start DeadBeef in background
 actions.start_dbeef = function ()
-	cmd = "screen -dmS dbeef deadbeef"
+	cmd = "screen -dmS foobar playonlinux --run Foobar2000"
 
 	local pout = "";
 	local presult = 0;
@@ -138,7 +138,7 @@ end
 
 --@help Exit DeadBeef
 actions.stop_dbeef = function ()
-	cmd = "screen -dmS dbeef deadbeef --quit"
+	cmd = "screen -X -S foobar quit"
 
 	local pout = "";
 	local presult = 0;
@@ -210,4 +210,9 @@ end
 --@help Love the Song
 actions.love_it = function ()
   kb.stroke("ctrl","lwin","num6");
+end
+
+--@help UnLove the Song
+actions.unlove_it = function ()
+  kb.stroke("ctrl","lwin","numaddition");
 end
