@@ -12,11 +12,7 @@
       <row weight="2">
         <grid color="blue">
           <button icon="previous" ontap="previous" />
-          <grid color="blue">
-            <row><button icon="stop" ontap="stop" /></row>
-            <row><button icon="playpause" ontap="play_pause" /></row>
-            <row><button icon="shuffle" ontap="random_song" /></row>
-          </grid>
+          <button icon="playpause" ontap="play_pause" />
           <button icon="next" ontap="next" />
         </grid>
       </row>
@@ -47,11 +43,11 @@
       <row weight="1">
         <grid color="blue">
           <button text="✸"  ontap="star_0" />
-          <button id="star1" text="☆"  ontap="star_1" />
-          <button id="star2" text="☆" ontap="star_2" />
-          <button id="star3" text="☆" ontap="star_3" />
-          <button id="star4" text="☆" ontap="star_4" />
-          <button id="star5" text="☆" ontap="star_5" />
+          <button id="star1" text="✩"  ontap="star_1" />
+          <button id="star2" text="✩" ontap="star_2" />
+          <button id="star3" text="✩" ontap="star_3" />
+          <button id="star4" text="✩" ontap="star_4" />
+          <button id="star5" text="✩" ontap="star_5" />
           <grid>
             <row><button id="loveit" text="❤" ontap="love_it" /></row>
             <row><button id="unloveit" text="❤" ontap="unlove_it" /></row>

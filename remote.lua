@@ -17,7 +17,7 @@ events.postaction = function ()
 end
 
 function updateInfo()
-	cmd = "deadbeef --nowplaying-tf '$select($add(%rating%,1),☆;☆;☆;☆;☆,★;☆;☆;☆;☆,★;★;☆;☆;☆,★;★;★;☆;☆,★;★;★;★;☆,★;★;★;★;★)$ifequal([%loved%], 1, ;💔,;❤)|$select(%lang%,OT,EN) ( $select($add(%rating%,1),☆ ☆ ☆ ☆ ☆,★ ☆ ☆ ☆ ☆,★ ★ ☆ ☆ ☆,★ ★ ★ ☆ ☆,★ ★ ★ ★ ☆,★ ★ ★ ★ ★) )$ifequal([%loved%], 1, ❤ ,) [(%year%)] [%artist% -] $if2(%title%,%filename%) [(%genre%)]'"
+	cmd = "deadbeef --nowplaying-tf '$select($add(%rating%,1),✩;✩;✩;✩;✩,★;✩;✩;✩;✩,★;★;✩;✩;✩,★;★;★;✩;✩,★;★;★;★;✩,★;★;★;★;★)$ifequal([%loved%], 1, ;💔,;❤)|$select(%lang%,OT,EN) ( $select($add(%rating%,1),✩ ✩ ✩ ✩ ✩,★ ✩ ✩ ✩ ✩,★ ★ ✩ ✩ ✩,★ ★ ★ ✩ ✩,★ ★ ★ ★ ✩,★ ★ ★ ★ ★) )$ifequal([%loved%], 1, ❤ ,) [(%year%)] [%artist% -] $if2(%title%,%filename%) [(%genre%)]'"
 	local pout = "";
 	local presult = 0;
 	local perr = "";
@@ -60,54 +60,17 @@ end
 
 --@help Toggle play/pause
 actions.play_pause = function ()
-	cmd = "screen -dmS dbeef deadbeef --play-pause"
-
-	local pout = "";
-	local presult = 0;
-	local perr = "";
-	
-	local success, ex = pcall(function ()
-		pout,perr,presult = libs.script.shell(cmd);
-	end);
+	kb.stroke("ctrl","lwin","dot");
 end
 
 --@help Next playlist item
 actions.next = function ()
-	cmd = "screen -dmS dbeef deadbeef --next"
-
-	local pout = "";
-	local presult = 0;
-	local perr = "";
-	
-	local success, ex = pcall(function ()
-		pout,perr,presult = libs.script.shell(cmd);
-	end);
+	kb.stroke("ctrl","lwin","slash");
 end
 
 --@help Previous playlist item
 actions.previous = function ()
-	cmd = "screen -dmS dbeef deadbeef --prev"
-
-	local pout = "";
-	local presult = 0;
-	local perr = "";
-	
-	local success, ex = pcall(function ()
-		pout,perr,presult = libs.script.shell(cmd);
-	end);
-end
-
---@help Stop playback
-actions.stop = function ()
-	cmd = "screen -dmS dbeef deadbeef --stop"
-
-	local pout = "";
-	local presult = 0;
-	local perr = "";
-	
-	local success, ex = pcall(function ()
-		pout,perr,presult = libs.script.shell(cmd);
-	end);
+	kb.stroke("ctrl","lwin","comma");
 end
 
 --@help Play random song
