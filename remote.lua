@@ -1,4 +1,5 @@
 local kb = libs.keyboard;
+local dev = libs.device;
 local timer = libs.timer;
 local tid;
 
@@ -126,12 +127,14 @@ end
 -- Command that runs : cp -f %F /home/raven/Downloads/Music/Collection/English/
 actions.fav_it_en = function ()
 	kb.stroke("ctrl","lwin","num7");
+	dev.toast("Copied to EN Collection");
 end
 
 --@help Copy to Others Favourites
 -- Command that runs : cp -f %F /home/raven/Downloads/Music/Collection/Others/
 actions.fav_it_ot = function ()
 	kb.stroke("ctrl","lwin","num8");
+	dev.toast("Copied to OT Collection");
 end
 
 --@help Remove from Favourites
